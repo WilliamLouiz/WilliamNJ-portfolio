@@ -55,6 +55,26 @@ const projects = [
     type: "Innovation / VR",
   },
   {
+    title: "Assets i-oasis",
+    description:
+      "Application de stockage et de transfert des assets entre les développeurs et les graphistes de i-oasis, avec visualisation 3D de toutes les extensions 3D (fbx, glb, etc ...)",
+    tech: ["ReactJS", "NodeJS", "PostgreSQL"],
+    link: "#",
+    github: "#",
+    icon: <FaChartPie />,
+    type: "Application métier",
+  },
+  {
+    title: "AI Wordpress",
+    description:
+      "API IA qui genère les meta-descriptions du site wordpress iffen.fr",
+    tech: ["Django", "PostgreSQL"],
+    link: "#",
+    github: "#",
+    icon: <FaChartPie />,
+    type: "Application métier",
+  },
+  {
     title: "Fiche Positionnement",
     description:
       "Application Next.js pour le positionnement des étudiants. Permet de générer et gérer les fiches de positionnement des apprenants.",
@@ -90,16 +110,6 @@ const projects = [
       "Application de gestion des prospects pour l'institut IFFEN.",
     tech: ["Next.js", "Django", "PostgreSQL"],
     link: "https://prospect.iffen.fr/",
-    github: "#",
-    icon: <FaChartPie />,
-    type: "Application métier",
-  },
-  {
-    title: "Assets i-oasis",
-    description:
-      "Application de stockage et de transfert des assets entre les dévéloppeurs et les graphistes de i-oasis, avec visualisation 3D de toutes les extensions 3D (fbx, glb, etc ...)",
-    tech: ["ReactJS", "NodeJS", "PostgreSQL"],
-    link: "#",
     github: "#",
     icon: <FaChartPie />,
     type: "Application métier",
