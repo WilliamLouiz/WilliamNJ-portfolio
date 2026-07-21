@@ -41,7 +41,7 @@ const experiences = [
     poste: "Développeur",
     entreprise: "FISACOMPTA",
     description:
-      "Participation au développement de l'application FISACOMPTA, une solution de gestion de comptabilité, fiscalité et paie à Madagascar, conforme au PCG 2005.",
+      "Participation au développement de l'application FISACOMPTA, une solution de gestion de comptabilité, fiscalité et paie à Madagascar, conforme au PCG 2005. Avec abonnement par Mobile Money",
     technologies: ["Python/Django", "React JS", "PostgreSQL"],
   },
   {
