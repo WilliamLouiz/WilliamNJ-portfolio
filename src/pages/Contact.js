@@ -1,19 +1,78 @@
 // pages/Contact.js
 import React, { useState } from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 import "./pages.css";
 
 function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ 
+    name: "", 
+    email: "", 
+    message: "" 
+  });
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Message envoyé (simulation) !");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSending(true);
+
+    try {
+      // Configuration EmailJS 
+      const serviceId = 'service_g9r78al';     
+      const templateId = 'template_obj3nve';   
+      const publicKey = 'x9GMjz6RbOqY1MVdt';     
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_name: 'William', // Votre prénom
+        to_email: 'njatomiarintsoawilliam@gmail.com',
+        date: new Date().toLocaleString('fr-FR'),
+      };
+
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      if (response.status === 200) {
+        toast.success(' Message envoyé avec succès ! Je vous répondrai rapidement.', {
+          duration: 5000,
+          position: 'top-center',
+          style: {
+            background: '#e6f4ea',
+            color: '#1e7e34',
+            border: '1px solid #b7e1cd',
+            padding: '16px',
+            borderRadius: '8px',
+          },
+        });
+        setFormData({ name: "", email: "", message: "" });
+      }
+    } catch (error) {
+      console.error('Erreur EmailJS:', error);
+      toast.error(' Erreur lors de l\'envoi. Veuillez réessayer ou m\'envoyer un email directement.', {
+        duration: 5000,
+        position: 'top-center',
+        style: {
+          background: '#fce8e6',
+          color: '#c62828',
+          border: '1px solid #f5c6cb',
+          padding: '16px',
+          borderRadius: '8px',
+        },
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -69,6 +128,7 @@ function Contact() {
                 onChange={handleChange}
                 placeholder="Votre nom"
                 required
+                disabled={isSending}
               />
             </div>
             <div className="form-group">
@@ -81,6 +141,7 @@ function Contact() {
                 onChange={handleChange}
                 placeholder="votre@email.com"
                 required
+                disabled={isSending}
               />
             </div>
             <div className="form-group">
@@ -93,10 +154,16 @@ function Contact() {
                 onChange={handleChange}
                 placeholder="Votre message..."
                 required
+                disabled={isSending}
               />
             </div>
-            <button type="submit" className="btn btn--primary">
-              <FaPaperPlane /> Envoyer
+            <button 
+              type="submit" 
+              className="btn btn--primary"
+              disabled={isSending}
+            >
+              <FaPaperPlane /> 
+              {isSending ? 'Envoi en cours...' : 'Envoyer'}
             </button>
           </form>
         </div>

@@ -32,7 +32,7 @@ const projects = [
     link: "https://aromadive.com/",
     github: "#",
     icon: <FaShoppingCart />,
-    type: "E-commerce",
+    type: "Site vitrine",
   },
   {
     title: "I-Oasis.fr",
@@ -48,7 +48,7 @@ const projects = [
     title: "Streaming Vidéo VR",
     description:
       "Plateforme de streaming vidéo permettant de diffuser en temps réel les actions des stagiaires équipés d'un casque VR vers une interface web pour que leurs encadreurs puissent noter en même temps leur travail",
-    tech: ["Java", "React.js", "PostgreSQL", "WebRTC"],
+    tech: ["Java", "React.js", "PostgreSQL", "Websocket"],
     link: "http://13.39.182.184/",
     github: "#",
     icon: <FaVideo />,
@@ -78,7 +78,7 @@ const projects = [
     title: "Fiche Positionnement",
     description:
       "Application Next.js pour le positionnement des étudiants. Permet de générer et gérer les fiches de positionnement des apprenants.",
-    tech: ["Next.js", "React", "Node.js", "PostgreSQL"],
+    tech: ["Next.js", "Node.js", "PostgreSQL"],
     link: "https://fichepositionnement.iffen.fr/",
     github: "#",
     icon: <FaGraduationCap />,
@@ -90,6 +90,16 @@ const projects = [
       "Génération et gestion des formulaires CERFA pour l'institut IFFEN. Automatisation des documents administratifs.",
     tech: ["Next.js", "Django", "PostgreSQL"],
     link: "https://cerfa.iffen.fr/",
+    github: "#",
+    icon: <FaChartPie />,
+    type: "Application métier",
+  },
+  {
+    title: "CFA IFFEN",
+    description:
+      "Application sous-domaine de iffen.fr pour l'apprentissage en altérnance ",
+    tech: ["Next.js", "Laravel", "MySQL"],
+    link: "https://cfa.iffen.fr/",
     github: "#",
     icon: <FaChartPie />,
     type: "Application métier",
