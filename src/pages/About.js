@@ -50,7 +50,7 @@ const experiences = [
     entreprise: "I-OASIS / IFFEN",
     description:
       "En charge du développement et de la maintenance de plusieurs sites web et applications de l'entreprise (Iffen et I-Oasis ayant le même fondateur).",
-    technologies: ["WordPress", "AngularJS", "Next.js", "Django", "Laravel", "Node.js", "PostgreSQL", "MySQL"],
+    technologies: ["WordPress", "React.js", "Astro", "Java", "AngularJS", "Next.js", "Django", "Laravel", "Node.js", "PostgreSQL", "MySQL"],
   },
 ];
 
