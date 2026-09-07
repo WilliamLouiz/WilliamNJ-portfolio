@@ -48,7 +48,7 @@ const projects = [
     title: "Streaming Vidéo VR",
     description:
       "Plateforme de streaming vidéo permettant de diffuser en temps réel les actions des stagiaires équipés d'un casque VR vers une interface web pour que leurs encadreurs puissent noter en même temps leur travail",
-    tech: ["Java", "React.js", "PostgreSQL", "Websocket"],
+    tech: ["NodeJS", "ReactJS", "PostgreSQL", "Websocket"],
     link: "http://13.39.182.184/",
     github: "#",
     icon: <FaVideo />,
