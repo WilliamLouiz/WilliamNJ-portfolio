@@ -38,7 +38,6 @@ const skillsData = {
     { name: "React.js", icon: <FaReact />, color: "#61dafb" },
     { name: "Next.js", icon: <SiNextdotjs />, color: "#fff" },
     { name: "Astro", icon: <SiAstro />, color: "#fff" },
-    { name: "Angular", icon: <FaAngular />, color: "#dd0031" },
   ],
   "Backend": [
     { name: "Django", icon: <SiDjango />, color: "#0c4e35" },
